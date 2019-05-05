@@ -1,0 +1,13 @@
+name 'demo-cookbook'
+maintainer 'Robert Thurston'
+maintainer_email 'rdt@redoubt.io'
+license 'Public Domain'
+description 'Installs/Configures demo-cookbook'
+long_description 'Installs/Configures demo-cookbook'
+version '0.1.0'
+supports 'windows'
+chef_version '>= 13.0'
+issues_url 'https://github.com/rdt-redoubtio/rio_public/issues'
+source_url 'https://github.com/rdt-redoubtio/rio_public'
+
+depends 'powershell', '>=6.1.3'

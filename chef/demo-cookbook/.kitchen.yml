@@ -1,0 +1,31 @@
+---
+driver:
+  name: vagrant
+
+provisioner:
+  name: chef_zero
+  product_name: chef
+  product_version: latest
+  channel: stable
+  always_update_cookbooks: true
+
+transport:
+  name: winrm
+  elevated: true
+  max_wait_until_ready: 1800
+
+verifier:
+  name: inspec
+  
+platforms:
+  - name: ubuntu-16.04
+  - name: centos-7
+
+suites:
+  - name: default
+    run_list:
+      - recipe[demo-cookbook::default]
+    verifier:
+      inspec_tests:
+        - test/integration/default
+    attributes:
