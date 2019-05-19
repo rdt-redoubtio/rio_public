@@ -1,0 +1,35 @@
+---
+layout: default
+---
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <h2>{{ page.title }}</h2>
+    </div>
+
+  </div>
+  <div class="row">
+    <div class="col-12 col-md-8">
+      {{ content }}
+    </div>
+  <div class="col-12 col-md-2">
+    <h2>People</h2>
+    <ul>
+    {% for person in site.people %}
+        {% if person.tags == page.tags %}
+          <li><a href="{{ person.url}}">{{ person.title }} - {{ person.jobtitle}}</a></li>
+        {% endif %}
+    {% endfor %}
+    </ul>
+  </div>
+  <div class="col-12 col-md-2">
+    <h2>Department News</h2>
+    <ul>
+    {% for article in site.news %}
+        {% if article.tags == page.tags %}
+          <li><a href="{{ article.url}}">{{ article.title }} - {{ article.date | date: site.date_format }}</a></li>
+        {% endif %}
+    {% endfor %}
+    </ul>
+  </div>
+</div>

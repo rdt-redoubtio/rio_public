@@ -1,0 +1,10 @@
+---
+layout: page
+title: News
+permalink: /news/
+---
+<ul>
+{% for article in site.news %}
+      <li><a href="{{ article.url}}">{{ article.title }} - {{ article.date | date: site.date_format }}</a></li>
+{% endfor %}
+</ul>

@@ -1,0 +1,10 @@
+---
+layout: page
+title: Policies
+permalink: /policies/
+---
+<ul>
+{% for policy in site.policies %}
+      <li><a href="{{ policy.url}}">{{ policy.title }}</a></li>
+{% endfor %}
+</ul>

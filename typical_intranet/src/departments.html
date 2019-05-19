@@ -1,0 +1,10 @@
+---
+layout: page
+title: Departments
+permalink: /departments/
+---
+<ul>
+{% for department in site.departments %}
+      <li><a href="{{ department.url}}">{{ department.title }}</a></li>
+{% endfor %}
+</ul>

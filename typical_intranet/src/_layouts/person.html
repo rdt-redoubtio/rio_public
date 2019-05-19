@@ -1,0 +1,21 @@
+---
+layout: default
+---
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <h2>{{ page.title }} - {{ page.jobtitle }}</h2>
+      {% for department in site.departments %}
+        {% if department.tags == page.tags %}
+          <p><a href="{{ department.url}}">{{ department.title}} Department</a></p>
+        {% endif %}
+      {% endfor %}
+      <p><a href="{{ page.delve}}">Contact Information</a></p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      {{ content }}
+    </div>
+  </div>
+</div>

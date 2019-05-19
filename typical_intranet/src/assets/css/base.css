@@ -1,0 +1,9 @@
+/* Footer Spacing & Color */
+#content-wrap {
+  padding-bottom: 30px;
+}
+
+.footer {
+  color: white;
+  height: 30px;
+}

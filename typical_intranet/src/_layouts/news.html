@@ -1,0 +1,17 @@
+---
+layout: default
+---
+<div class="container">
+  <div class="row">
+    <div class="col-12 col-md-8">
+      <h2>{{ page.title }}</h2>
+      <h5>{{ page.date | date: site.date_format }}</h5>
+      <a href="mailto {{ page.email }}"><h5>{{ page.author }}</h5></a>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12 col-md-8">
+      {{ content }}
+    </div>
+  </div>
+</div>
